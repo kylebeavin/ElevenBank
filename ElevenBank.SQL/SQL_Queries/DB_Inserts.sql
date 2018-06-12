@@ -1,0 +1,36 @@
+--inserts--
+--SET IDENTITY_INSERT "Customer" ON
+--INSERT "Customer"("CustomerID","FirstName","LastName","CreatedUtc") VALUES(1,'Billy', 'Idol',N'12/1/2017 9:07:59 AM -01:00')
+--INSERT "Customer"("CustomerID","FirstName","LastName","CreatedUtc") VALUES(2,'Max', 'Headroom',N'12/1/2017 9:07:59 AM -01:00')
+--INSERT "Customer"("CustomerID","FirstName","LastName","CreatedUtc") VALUES(3,'Jim', 'Carey',N'12/1/2017 9:07:59 AM -01:00')
+--INSERT "Customer"("CustomerID","FirstName","LastName","CreatedUtc") VALUES(4,'Dee', 'Snider',N'12/1/2017 9:07:59 AM -01:00')
+--SET IDENTITY_INSERT "Customer" OFF
+--GO
+
+--SET IDENTITY_INSERT "Account" ON
+--INSERT "Account"("AccountID","AccountNumber","Pin","AccountType","CustomerID","Balance","CreatedUtc") VALUES(1,1111,1111,1,1,999,N'12/1/2017 9:07:59 AM -01:00')
+--INSERT "Account"("AccountID","AccountNumber","Pin","AccountType","CustomerID","Balance","CreatedUtc") VALUES(2,2222,2222,2,2,999,N'12/2/2017 9:07:59 AM -02:00')
+--INSERT "Account"("AccountID","AccountNumber","Pin","AccountType","CustomerID","Balance","CreatedUtc") VALUES(3,3333,3333,1,3,999,N'12/3/2017 9:07:59 AM -03:00')
+--INSERT "Account"("AccountID","AccountNumber","Pin","AccountType","CustomerID","Balance","CreatedUtc") VALUES(4,4444,4444,2,4,999,N'12/4/2017 9:07:59 AM -04:00')
+--SET IDENTITY_INSERT "Account" OFF
+--GO
+--SET IDENTITY_INSERT "Transaction" ON
+--INSERT "Transaction"("TransactionID","TransactionType","AccountID","CreatedUtc") VALUES(1,2,1,N'12/1/2017 1:07:59 AM -01:00')
+--INSERT "Transaction"("TransactionID","TransactionType","AccountID","CreatedUtc") VALUES(2,2,2,N'12/1/2017 9:07:59 AM -02:00')
+--INSERT "Transaction"("TransactionID","TransactionType","AccountID","CreatedUtc") VALUES(3,2,3,N'12/1/2017 9:07:59 AM -03:00')
+--INSERT "Transaction"("TransactionID","TransactionType","AccountID","CreatedUtc") VALUES(4,2,4,N'12/1/2017 9:07:59 AM -04:00')
+--SET IDENTITY_INSERT "Transaction" OFF
+
+--SET IDENTITY_INSERT "Deposit" ON
+--INSERT "Deposit"("DepositID","Amount","TransactionID") VALUES(1, 100.00, 1)
+--INSERT "Deposit"("DepositID","Amount","TransactionID") VALUES(2, 200.00, 2)
+--INSERT "Deposit"("DepositID","Amount","TransactionID") VALUES(3, 300.00, 3)
+--INSERT "Deposit"("DepositID","Amount","TransactionID") VALUES(4, 400.00, 4)
+--SET IDENTITY_INSERT "Deposit" OFF
+
+--SET IDENTITY_INSERT "Withdrawal" ON
+--INSERT "Withdrawal"("WithdrawalID","Amount","TransactionID") VALUES(1, 100.00, 1)
+--INSERT "Withdrawal"("WithdrawalID","Amount","TransactionID") VALUES(2, 200.00, 2)
+--INSERT "Withdrawal"("WithdrawalID","Amount","TransactionID") VALUES(3, 300.00, 3)
+--INSERT "Withdrawal"("WithdrawalID","Amount","TransactionID") VALUES(4, 400.00, 4)
+--SET IDENTITY_INSERT "Withdrawal" OFF
